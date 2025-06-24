@@ -1,0 +1,228 @@
+
+:root {
+    --peach: #ffdab9;
+    --dark: #2f4f4f;
+    --cyan: #e0ffff;
+    --brown: #3e2723;
+    --green: #25d366;
+}
+* {
+    
+    box-sizing: border-box;
+}
+html, body { 
+    padding: 0;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#nav-container {
+    background-color: var(--cyan);
+    position: sticky;
+    top: 0;
+}
+.nav-flex {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px;
+}
+.nav-flex label, #humberger{
+    display: none;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin: 0;
+}
+nav ul li a {
+    display: block;
+    color: var(--dark);
+    padding: 0 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 60px;
+}
+nav ul li a:hover {
+    background-color: var(--peach);
+    transition: all 0.3s;
+}
+.nav-brand h2 {
+    color: var(--dark);
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 14px 0 0 10px;
+}
+
+/* materi */
+.padding {
+    padding-left: 5px;
+}
+h3 li, .rata_paragraf {
+    padding-right: 10px;
+}
+ol {
+    padding-left: 25px;
+}
+h3 li {
+    padding-left: 0;
+}
+.rata_paragraf {
+    text-align: justify;
+}
+/* p {
+    padding: 5px;
+} */
+.sumber {
+   font-style: italic;
+   font-size: small;
+   text-align: center;
+   flex-direction: column;
+}
+.fatima {
+    text-align: center;   
+}
+.flex-lourdes {
+    display: flex;
+    justify-content: center;
+    width: 100%;  
+    /* margin: 30px auto; */
+}
+.lourdes img {
+    width: 100%;
+   object-fit: cover;
+   height: 400px;
+}
+.flex-Beauraing {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+}
+.Beauraing img{
+    width: 100%;
+    height: 400px;
+    object-fit: cover;
+}
+.flex-zeitoun1 {
+    /* display: flex; */
+    /* align-items: center; */
+    /* flex-direction: column; */
+    /* max-width: 100%; */
+    width: 100%;
+}
+.zeitoun1 {
+    gap: 10px;
+    /* width: 100%; */
+    display: flex;
+    justify-content: center;
+}
+.zeitoun1 img {
+    height: 400px;
+}
+.flex-zeitoun2 {
+    width: 100%;
+}
+.zeitoun2 {
+    display: flex;
+    justify-content: center;
+    /* width: 100%; */
+    height: 500px;
+}
+
+/* versi tablet */
+@media screen and (max-width: 768px) {
+    /* Tampilkan icon humberger */
+    #nav-container .nav-flex label {
+        display: inline-block;
+        color: var(--dark);
+        font-style: normal;
+        font-size: 32px;
+        padding: 8px;
+    }
+    /* susun ulang menu menjadi vertikal */
+    #nav-container .nav-flex {
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+    nav ul li a {
+        display: block;
+        color: var(--dark);
+        background-color: var(--cyan);
+        padding: 0 30px;
+        height: auto;
+    }
+    /* Pindahkan posisi brand kekanan, dan perkecil */
+    .nav-brand h2 {
+        position: absolute;
+        right: 20px;
+    }
+    /* untuk menampilkan / menyembunyikan menu */
+    #nav-container nav {
+        display: none;
+    }
+    /* menampilkan menu ketika humberger (titik tiga) diklik */
+    #nav-container .nav-flex input:checked ~ nav {
+        display: flex;
+    }
+    .flex-lourdes {
+        display: flex;
+        width: 100%;
+    }
+    .lourdes img{
+        align-items: center;
+        height: 300px;
+    }
+    .Beauraing img {
+        width: 100%;
+        height: 400px;
+        object-fit: cover;
+    }
+    .zeitoun1 {
+        width: 100%;
+    }
+    .zeitoun1 img { 
+        height: 200px;
+    }
+    /* .flex-zeitoun2 {
+        width: 100%;
+    } */
+    .zeitoun2 img {
+        width: 80%;
+    }
+}
+    /* versi smartphone */
+    @media screen and (max-width:481px) {
+    .flex-lourdes {
+        display: flex;
+        width: 100%;
+    }
+    .lourdes img {
+        width: 100%;
+        height: 240px;
+        align-items: center;
+ 
+    }
+    .flex-zeitoun1 {
+        display: flex;
+    }
+    .zeitoun1 {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        gap: 10px;
+        width: 100%;
+        
+    }
+    .zeitoun1 img {
+        height: 200px;
+    }
+    .zeitoun2 {
+        height: 200px;
+    }
+}

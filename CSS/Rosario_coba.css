@@ -1,0 +1,154 @@
+:root {
+    --green: #25d366;
+    --dark: #2f4f4f;
+    --cyan: #e0ffff;
+    --peach: #ffdab9;
+}
+* {
+    padding-left: 5px;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+html, body {
+    padding: 0;
+    margin: 0;
+    /* background-color:lightsteelblue; */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#nav-container {
+     background-color: var(--cyan);
+     position: sticky;
+     top: 0px; 
+}
+.nav-flex {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    height: 60px; 
+}
+.nav-flex label, #humberger {
+    display: none;
+}
+nav ul {
+    list-style-type: none;
+    display: flex;
+    padding: 0;
+    margin:0;
+}
+nav ul li a {
+    display: block;
+    color: var(--dark);
+    padding: 0 16px;
+    text-decoration: none;
+    text-transform: uppercase;
+    line-height: 60px;
+}
+nav ul li a:hover {
+    background-color: var(--peach);
+    transition: all 0.3s;
+}
+.nav-brand h2 {
+    margin: 14px 0 0 10px;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    color: var(--dark);
+}
+h4 {
+    color: rgb(6, 148, 148);
+}
+h4, p {
+    margin-top: 1px;
+    line-height: 20px;   
+}
+p {
+    text-align: justify;
+}
+h2, p {
+    padding-left: 10px;
+}
+.kalimat {
+    padding-left: 16px;
+}
+.h2, img {
+   /* width; 120px; */
+   height: 600px;
+}
+
+/* versi tablet */
+@media only screen (max-width: 768px) {
+    /* Tampilkan icon humberger */
+    #nav-container .nav-flex, label {
+        display: inline-block;
+        color: black;
+        font-style: normal;
+        font-size: 32px;
+        padding: 8px;
+    }
+     /* susun ulang menu menjadi vertikal */
+     #nav-container .nav-flex {
+        width: 100%;
+    }
+    nav ul {
+        flex-direction: column;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
+    }
+    nav ul li a {
+        display: block;
+        color: var(--dark);
+        background-color: var(--cyan);
+        padding: 0 30px;
+        height: auto;
+    }
+    /* pindahkan posisi brand kekanan, dan perkecil */
+    .nav-brand h2 {
+        position: absolute;
+        right: 20px;
+    }
+    /* untuk menampilkan / menyembunyikan menu */
+    #nav-container nav {
+        display: none;
+    }
+    /* menampilkan menu ketika teks garis tiga diklik */
+    #nav-container .nav-flex input:checked ~ nav {
+        display: flex;
+    }
+    }
+    
+
+/* versi smartphone */
+@media only screen and (max-width:481px){
+* {
+    padding-left: 1px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h4 {
+    color: rgb(6, 148, 148);
+}
+h4, p {
+    margin-top: 1px;
+    line-height: 20px;
+    
+}
+p {
+    text-align: justify;
+}
+h2, p {
+    padding-left: 10px;
+}
+.kalimat {
+    padding-left: 16px;
+}
+.h2, img {
+   /* width; 120px; */
+   height: 600px;
+}
+#nav-container .nav-flex {
+    width: 50%;
+}
+}
+
+
+    
